@@ -32,7 +32,7 @@ app.put('/api/articles/:name/upvote', async (req, res) => {
 
     if (article)
     {
-        res.send(`The article ${name} has ${article.upvotes} upvotes!`);
+        res.json(article);
     }
     else
     {
@@ -51,7 +51,7 @@ app.post('/api/articles/:name/comments', async (req, res) => {
 
     if (article)
     {
-        res.json(article.comments);
+        res.json(article);
     }
     else
     {
